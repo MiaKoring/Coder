@@ -13,34 +13,20 @@ struct CoderView: View{
     @State var showEncodedEmptyAlert = false
     @State var showNotUTF8Alert = false
     @State var showEncodedNotFormatAlert = false
-    @Binding var algo: CodingAlgorithm
+    @State var algo: CodingAlgorithm = .base64
     @Binding var startCodeItem: CodedItem?
     @Binding var cachedNew: CodedItem?
-    @State var isNew = true
+    @Binding var isNew: Bool
     @State var leftDeleteHovered = false
     @State var rightDeleteHovered = false
+    @State var leftReverseHovered = false
+    @State var rightReverseHovered = false
     
     var body: some View{
         HStack{
             TextEditor(text: $clear)
                 .scrollIndicators(.never)
                 .font(.system(size: fontSize))
-                .overlay(alignment: .topTrailing){
-                    HStack{
-                        Image(systemName: "multiply")
-                            .allowsHitTesting(false)
-                    }
-                    .padding(3)
-                    .background(leftDeleteHovered ? Color("ItemBackgroundHovered") : Color("ItemBackgroundNormal"))
-                    .clipShape(RoundedRectangle(cornerRadius: 5, style: .circular))
-                    .padding(2)
-                    .onHover(){ hovering in
-                        leftDeleteHovered = hovering
-                    }
-                    .onTapGesture {
-                        clear = ""
-                    }
-                }
                 
             VStack{
                 Image(systemName: "arrow.right")
@@ -89,9 +75,10 @@ struct CoderView: View{
                         showEncodedEmptyAlert = true
                         return
                     }
+                    let alias = encoded.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "\r", with: "").replacingOccurrences(of: "\n", with: "")
                     switch algo {
                     case .base64:
-                        guard let data = Data(base64Encoded: encoded) else{
+                        guard let data = Data(base64Encoded: alias) else{
                             showEncodedNotFormatAlert = true
                             return
                         }
@@ -101,13 +88,13 @@ struct CoderView: View{
                         }
                         clear = string
                     case .base32:
-                        guard let string  = encoded.base32DecodedString() else{
+                        guard let string  = alias.base32DecodedString() else{
                             showEncodedNotFormatAlert = true
                             return
                         }
                         clear = string
                     case .base16:
-                        guard let string  = encoded.base16DecodedString() else{
+                        guard let string  = alias.base16DecodedString() else{
                             showEncodedNotFormatAlert = true
                             return
                         }
@@ -140,20 +127,7 @@ struct CoderView: View{
                 .scrollIndicators(.never)
                 .font(.system(size: fontSize))
                 .overlay(alignment: .topTrailing){
-                    HStack{
-                        Image(systemName: "multiply")
-                            .allowsHitTesting(false)
-                    }
-                    .padding(3)
-                    .background(rightDeleteHovered ? Color("ItemBackgroundHovered") : Color("ItemBackgroundNormal"))
-                    .clipShape(RoundedRectangle(cornerRadius: 5, style: .circular))
-                    .padding(2)
-                    .onHover(){ hovering in
-                        rightDeleteHovered = hovering
-                    }
-                    .onTapGesture {
-                        encoded = ""
-                    }
+                    
                 }
 
         }
@@ -190,6 +164,87 @@ struct CoderView: View{
                 clear = cachedNew!.clear
                 encoded = cachedNew!.coded
                 algo = CodingAlgorithm(rawValue: cachedNew!.algo)!
+            }
+        }
+        .toolbar{
+            ToolbarItem(placement: .accessoryBar(id: 1)){
+                HStack{
+                    HStack{
+                        Image(systemName: "xmark")
+                            .font(.title3)
+                            .allowsHitTesting(false)
+                    }
+                    .padding(3)
+                    .background(leftDeleteHovered ? Color("ItemBackgroundHovered") : Color("ItemBackgroundNormal"))
+                    .clipShape(RoundedRectangle(cornerRadius: 5, style: .circular))
+                    .onHover(){ hovering in
+                        withAnimation{
+                            leftDeleteHovered = hovering
+                        }
+                    }
+                    .onTapGesture {
+                        clear = ""
+                    }
+                    HStack{
+                        Image(systemName: "arrow.left.arrow.right")
+                            .allowsHitTesting(false)
+                    }
+                    .padding(3)
+                    .background(leftReverseHovered ? Color("ItemBackgroundHovered") : Color("ItemBackgroundNormal"))
+                    .clipShape(RoundedRectangle(cornerRadius: 5, style: .circular))
+                    .onHover(){ hovering in
+                        withAnimation{
+                            leftReverseHovered = hovering
+                        }
+                    }
+                    .onTapGesture {
+                        clear = String(clear.reversed())
+                    }
+                    Spacer()
+                    Menu{
+                        Picker(selection: $algo){
+                            ForEach(CodingAlgorithm.allCases, id: \.self){algorithm in
+                                Text(LocalizedStringKey(algorithm.rawValue)).tag(algorithm).font(.title2)
+                            }
+                        }label:{}
+                            .pickerStyle(.inline)
+                    }label: {
+                        Text(LocalizedStringKey(algo.rawValue))
+                            .font(.callout)
+                    }
+                    Spacer()
+                    HStack{
+                        Image(systemName: "arrow.left.arrow.right")
+                            .allowsHitTesting(false)
+                    }
+                    .padding(3)
+                    .background(rightReverseHovered ? Color("ItemBackgroundHovered") : Color("ItemBackgroundNormal"))
+                    .clipShape(RoundedRectangle(cornerRadius: 5, style: .circular))
+                    .onHover(){ hovering in
+                        withAnimation{
+                            rightReverseHovered = hovering
+                        }
+                    }
+                    .onTapGesture {
+                        encoded = String(encoded.reversed())
+                    }
+                    HStack{
+                        Image(systemName: "xmark")
+                            .font(.title3)
+                            .allowsHitTesting(false)
+                    }
+                    .padding(3)
+                    .background(rightDeleteHovered ? Color("ItemBackgroundHovered") : Color("ItemBackgroundNormal"))
+                    .clipShape(RoundedRectangle(cornerRadius: 5, style: .circular))
+                    .onHover(){ hovering in
+                        withAnimation{
+                            rightDeleteHovered = hovering
+                        }
+                    }
+                    .onTapGesture {
+                        encoded = ""
+                    }
+                }
             }
         }
     }

@@ -7,13 +7,17 @@
 
 import SwiftUI
 import SwiftData
+extension Bundle {
+    var buildNumber: String {
+        return infoDictionary?["CFBundleVersion"] as! String
+    }
+}
 
 struct ContentView: View {
     @Environment(\.modelContext) private var context
     @Query(CodedItem.performanceDescriptor) var items: [CodedItem]
     @State var createNew = false
     @State var currentItem: CodedItem?
-    @State var algo: CodingAlgorithm = .base64
     @Binding var fontSize: Double
     @State var currentID = 0
     @State var defaultLinkActive = true
@@ -23,13 +27,14 @@ struct ContentView: View {
     @State var newSelected = true
     @State var currentSelected: CodedItem? = nil
     @State var cachedNew: CodedItem?
+    @State var isNew = true
 
     var body: some View {
         NavigationSplitView {
             List {
                 HStack{
                     HStack{
-                        Text("New")
+                        Text(LocalizedStringKey("New"))
                             .allowsHitTesting(false)
                         Spacer()
                     }
@@ -47,6 +52,7 @@ struct ContentView: View {
                         currentSelected = nil
                         newSelected = true
                         startCodeItem = nil
+                        isNew = true
                     }
                     .onHover(){hovering in
                         withAnimation(.easeInOut(duration: 0.1)){
@@ -110,7 +116,7 @@ struct ContentView: View {
             }
             .navigationSplitViewColumnWidth(min: 200, ideal: 200, max: 200)
         } detail: {
-            CoderView(fontSize: $fontSize, currentItem: $currentItem, createNew: $createNew, currentID: $currentID, algo: $algo, startCodeItem: $startCodeItem, cachedNew: $cachedNew)
+            CoderView(fontSize: $fontSize, currentItem: $currentItem, createNew: $createNew, currentID: $currentID, startCodeItem: $startCodeItem, cachedNew: $cachedNew, isNew: $isNew)
         }
         .navigationSplitViewColumnWidth(min: 180, ideal: 200, max: 200)
         .onAppear(){
@@ -120,16 +126,6 @@ struct ContentView: View {
             addItem()
         }
         .background(.opacity(0.0))
-        .toolbar {
-            ToolbarItem(placement: .principal){
-                Picker(LocalizedStringKey("algo"), selection: $algo){
-                    Text(LocalizedStringKey("base64")).tag(CodingAlgorithm.base64)
-                    Text(LocalizedStringKey("base32")).tag(CodingAlgorithm.base32)
-                    Text(LocalizedStringKey("base16")).tag(CodingAlgorithm.base16)
-                }
-                .labelsHidden()
-            }
-        }
         .onAppear(){
             let unselect = items.compactMap{item in
                 if item.selected == true{
@@ -141,6 +137,9 @@ struct ContentView: View {
                 un.selected = false
             }
         }
+        .onAppear(){
+            print(Bundle.main.buildNumber)
+        }
     }
 
     private func addItem() {
@@ -148,21 +147,26 @@ struct ContentView: View {
             if currentItem != nil{
                 context.insert(currentItem!)
                 currentID = currentItem!.id
+                
+                newSelected = false
+                currentSelected?.selected = false
+                currentSelected = currentItem
+                currentSelected!.selected = true
+                startCodeItem = currentItem
                 currentItem = nil
+                isNew = false
             }
             
             if items.count >= 100{
                 let deleteItems = items[99...items.count - 1]
                 for del in deleteItems{
                     context.delete(del)
-                    print("deleted \(del)")
                 }
             }
         }
     }
     
     private func deleteItem(_ item: CodedItem){
-        print(items.count)
         context.delete(item)
     }
 }

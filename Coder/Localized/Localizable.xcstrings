@@ -1,23 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Add Item" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Neu"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Neu"
-          }
-        }
-      }
-    },
     "algo" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -52,7 +35,14 @@
         }
       }
     },
+    "Automatically check for updates" : {
+
+    },
+    "Automatically download updates" : {
+
+    },
     "base16" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -107,6 +97,9 @@
         }
       }
     },
+    "Check for Updates…" : {
+
+    },
     "clearEmpty" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -123,9 +116,6 @@
           }
         }
       }
-    },
-    "Coder" : {
-
     },
     "decode" : {
       "extractionState" : "manual",
@@ -167,7 +157,14 @@
       }
     },
     "New" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neu"
+          }
+        }
+      }
     },
     "notFormatCompatible" : {
       "extractionState" : "manual",
@@ -226,23 +223,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Shrink Text"
-          }
-        }
-      }
-    },
-    "Test" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "lel"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "lel"
           }
         }
       }

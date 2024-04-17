@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14319CD32BD030A600A4A486 /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14319CD22BD030A600A4A486 /* LauchScreen.storyboard */; };
+		14319CD62BD0538500A4A486 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 14319CD52BD0538500A4A486 /* Sparkle */; };
 		14E4CA8A2BCEA0BE00D7386C /* CoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CA892BCEA0BE00D7386C /* CoderApp.swift */; };
 		14E4CA8C2BCEA0BE00D7386C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CA8B2BCEA0BE00D7386C /* ContentView.swift */; };
 		14E4CA8E2BCEA0BE00D7386C /* CodedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CA8D2BCEA0BE00D7386C /* CodedItem.swift */; };
@@ -19,7 +21,6 @@
 		14E4CAC52BCEB2C700D7386C /* CoderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CAC42BCEB2C700D7386C /* CoderView.swift */; };
 		14E4CAC72BCEB62B00D7386C /* UserDefaultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CAC62BCEB62A00D7386C /* UserDefaultHandler.swift */; };
 		14E4CACD2BCECB6000D7386C /* Base32 in Frameworks */ = {isa = PBXBuildFile; productRef = 14E4CACC2BCECB6000D7386C /* Base32 */; };
-		14E4CACF2BCEF73E00D7386C /* Launchscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CACE2BCEF73E00D7386C /* Launchscreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14319CD22BD030A600A4A486 /* LauchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LauchScreen.storyboard; sourceTree = "<group>"; };
+		14319CD72BD056F700A4A486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		14E4CA862BCEA0BE00D7386C /* Coder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E4CA892BCEA0BE00D7386C /* CoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderApp.swift; sourceTree = "<group>"; };
 		14E4CA8B2BCEA0BE00D7386C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,7 +58,6 @@
 		14E4CAC22BCEAA1E00D7386C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		14E4CAC42BCEB2C700D7386C /* CoderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderView.swift; sourceTree = "<group>"; };
 		14E4CAC62BCEB62A00D7386C /* UserDefaultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHandler.swift; sourceTree = "<group>"; };
-		14E4CACE2BCEF73E00D7386C /* Launchscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launchscreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14E4CACD2BCECB6000D7386C /* Base32 in Frameworks */,
+				14319CD62BD0538500A4A486 /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +110,7 @@
 		14E4CA882BCEA0BE00D7386C /* Coder */ = {
 			isa = PBXGroup;
 			children = (
+				14319CD72BD056F700A4A486 /* Info.plist */,
 				14E4CAC12BCEA9DD00D7386C /* Localized */,
 				14E4CAC02BCEA4CA00D7386C /* View */,
 				14E4CABF2BCEA3CA00D7386C /* Model */,
@@ -157,7 +161,7 @@
 				14E4CA892BCEA0BE00D7386C /* CoderApp.swift */,
 				14E4CA8B2BCEA0BE00D7386C /* ContentView.swift */,
 				14E4CAC42BCEB2C700D7386C /* CoderView.swift */,
-				14E4CACE2BCEF73E00D7386C /* Launchscreen.swift */,
+				14319CD22BD030A600A4A486 /* LauchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +192,7 @@
 			name = Coder;
 			packageProductDependencies = (
 				14E4CACC2BCECB6000D7386C /* Base32 */,
+				14319CD52BD0538500A4A486 /* Sparkle */,
 			);
 			productName = Coder;
 			productReference = 14E4CA862BCEA0BE00D7386C /* Coder.app */;
@@ -263,6 +268,7 @@
 			mainGroup = 14E4CA7D2BCEA0BE00D7386C;
 			packageReferences = (
 				14E4CACB2BCECB6000D7386C /* XCRemoteSwiftPackageReference "Base32" */,
+				14319CD42BD0538500A4A486 /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			productRefGroup = 14E4CA872BCEA0BE00D7386C /* Products */;
 			projectDirPath = "";
@@ -282,6 +288,7 @@
 			files = (
 				14E4CAC32BCEAA1E00D7386C /* Localizable.xcstrings in Resources */,
 				14E4CA932BCEA0C000D7386C /* Preview Assets.xcassets in Resources */,
+				14319CD32BD030A600A4A486 /* LauchScreen.storyboard in Resources */,
 				14E4CA902BCEA0C000D7386C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +314,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14E4CACF2BCEF73E00D7386C /* Launchscreen.swift in Sources */,
 				14E4CA8C2BCEA0BE00D7386C /* ContentView.swift in Sources */,
 				14E4CA8E2BCEA0BE00D7386C /* CodedItem.swift in Sources */,
 				14E4CA8A2BCEA0BE00D7386C /* CoderApp.swift in Sources */,
@@ -479,22 +485,24 @@
 				CODE_SIGN_ENTITLEMENTS = Coder/Coder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"Coder/Preview Content\"";
 				DEVELOPMENT_TEAM = 68YWPYV749;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coder/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Coder;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_UILaunchStoryboardName = Launchscreen.swift;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = de.touchthegrass.Coder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -510,22 +518,24 @@
 				CODE_SIGN_ENTITLEMENTS = Coder/Coder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"Coder/Preview Content\"";
 				DEVELOPMENT_TEAM = 68YWPYV749;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coder/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Coder;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_UILaunchStoryboardName = Launchscreen.swift;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = de.touchthegrass.Coder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -647,6 +657,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		14319CD42BD0538500A4A486 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
 		14E4CACB2BCECB6000D7386C /* XCRemoteSwiftPackageReference "Base32" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/norio-nomura/Base32.git";
@@ -658,6 +676,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		14319CD52BD0538500A4A486 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14319CD42BD0538500A4A486 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
 		14E4CACC2BCECB6000D7386C /* Base32 */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 14E4CACB2BCECB6000D7386C /* XCRemoteSwiftPackageReference "Base32" */;
