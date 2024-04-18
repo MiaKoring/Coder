@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14319CD32BD030A600A4A486 /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14319CD22BD030A600A4A486 /* LauchScreen.storyboard */; };
+		14299D612BD1726F00496969 /* CodingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D602BD1726F00496969 /* CodingAlgorithm.swift */; };
+		14299D632BD172A600496969 /* CheckForUpdatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D622BD172A600496969 /* CheckForUpdatesView.swift */; };
+		14299D652BD172E900496969 /* UpdaterSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D642BD172E900496969 /* UpdaterSettingsView.swift */; };
+		14299D682BD1737F00496969 /* CheckForUpdatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D672BD1737F00496969 /* CheckForUpdatesViewModel.swift */; };
+		14299D6A2BD17A6800496969 /* CoderViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D692BD17A6800496969 /* CoderViewToolbar.swift */; };
+		14299D6C2BD17E6200496969 /* toolbarItemModifierViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D6B2BD17E6200496969 /* toolbarItemModifierViewExtensions.swift */; };
 		14319CD62BD0538500A4A486 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 14319CD52BD0538500A4A486 /* Sparkle */; };
 		14E4CA8A2BCEA0BE00D7386C /* CoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CA892BCEA0BE00D7386C /* CoderApp.swift */; };
 		14E4CA8C2BCEA0BE00D7386C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CA8B2BCEA0BE00D7386C /* ContentView.swift */; };
@@ -41,7 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14319CD22BD030A600A4A486 /* LauchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LauchScreen.storyboard; sourceTree = "<group>"; };
+		14299D602BD1726F00496969 /* CodingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingAlgorithm.swift; sourceTree = "<group>"; };
+		14299D622BD172A600496969 /* CheckForUpdatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForUpdatesView.swift; sourceTree = "<group>"; };
+		14299D642BD172E900496969 /* UpdaterSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdaterSettingsView.swift; sourceTree = "<group>"; };
+		14299D672BD1737F00496969 /* CheckForUpdatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForUpdatesViewModel.swift; sourceTree = "<group>"; };
+		14299D692BD17A6800496969 /* CoderViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderViewToolbar.swift; sourceTree = "<group>"; };
+		14299D6B2BD17E6200496969 /* toolbarItemModifierViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toolbarItemModifierViewExtensions.swift; sourceTree = "<group>"; };
 		14319CD72BD056F700A4A486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		14E4CA862BCEA0BE00D7386C /* Coder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E4CA892BCEA0BE00D7386C /* CoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderApp.swift; sourceTree = "<group>"; };
@@ -151,6 +161,8 @@
 			children = (
 				14E4CA8D2BCEA0BE00D7386C /* CodedItem.swift */,
 				14E4CAC62BCEB62A00D7386C /* UserDefaultHandler.swift */,
+				14299D602BD1726F00496969 /* CodingAlgorithm.swift */,
+				14299D672BD1737F00496969 /* CheckForUpdatesViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,7 +173,10 @@
 				14E4CA892BCEA0BE00D7386C /* CoderApp.swift */,
 				14E4CA8B2BCEA0BE00D7386C /* ContentView.swift */,
 				14E4CAC42BCEB2C700D7386C /* CoderView.swift */,
-				14319CD22BD030A600A4A486 /* LauchScreen.storyboard */,
+				14299D622BD172A600496969 /* CheckForUpdatesView.swift */,
+				14299D642BD172E900496969 /* UpdaterSettingsView.swift */,
+				14299D692BD17A6800496969 /* CoderViewToolbar.swift */,
+				14299D6B2BD17E6200496969 /* toolbarItemModifierViewExtensions.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,7 +303,6 @@
 			files = (
 				14E4CAC32BCEAA1E00D7386C /* Localizable.xcstrings in Resources */,
 				14E4CA932BCEA0C000D7386C /* Preview Assets.xcassets in Resources */,
-				14319CD32BD030A600A4A486 /* LauchScreen.storyboard in Resources */,
 				14E4CA902BCEA0C000D7386C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,11 +328,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14299D6A2BD17A6800496969 /* CoderViewToolbar.swift in Sources */,
 				14E4CA8C2BCEA0BE00D7386C /* ContentView.swift in Sources */,
 				14E4CA8E2BCEA0BE00D7386C /* CodedItem.swift in Sources */,
 				14E4CA8A2BCEA0BE00D7386C /* CoderApp.swift in Sources */,
+				14299D6C2BD17E6200496969 /* toolbarItemModifierViewExtensions.swift in Sources */,
+				14299D612BD1726F00496969 /* CodingAlgorithm.swift in Sources */,
+				14299D682BD1737F00496969 /* CheckForUpdatesViewModel.swift in Sources */,
 				14E4CAC52BCEB2C700D7386C /* CoderView.swift in Sources */,
+				14299D652BD172E900496969 /* UpdaterSettingsView.swift in Sources */,
 				14E4CAC72BCEB62B00D7386C /* UserDefaultHandler.swift in Sources */,
+				14299D632BD172A600496969 /* CheckForUpdatesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +429,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -468,7 +488,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;

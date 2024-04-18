@@ -17,10 +17,6 @@ struct CoderView: View{
     @Binding var startCodeItem: CodedItem?
     @Binding var cachedNew: CodedItem?
     @Binding var isNew: Bool
-    @State var leftDeleteHovered = false
-    @State var rightDeleteHovered = false
-    @State var leftReverseHovered = false
-    @State var rightReverseHovered = false
     
     var body: some View{
         HStack{
@@ -168,83 +164,7 @@ struct CoderView: View{
         }
         .toolbar{
             ToolbarItem(placement: .accessoryBar(id: 1)){
-                HStack{
-                    HStack{
-                        Image(systemName: "xmark")
-                            .font(.title3)
-                            .allowsHitTesting(false)
-                    }
-                    .padding(3)
-                    .background(leftDeleteHovered ? Color("ItemBackgroundHovered") : Color("ItemBackgroundNormal"))
-                    .clipShape(RoundedRectangle(cornerRadius: 5, style: .circular))
-                    .onHover(){ hovering in
-                        withAnimation{
-                            leftDeleteHovered = hovering
-                        }
-                    }
-                    .onTapGesture {
-                        clear = ""
-                    }
-                    HStack{
-                        Image(systemName: "arrow.left.arrow.right")
-                            .allowsHitTesting(false)
-                    }
-                    .padding(3)
-                    .background(leftReverseHovered ? Color("ItemBackgroundHovered") : Color("ItemBackgroundNormal"))
-                    .clipShape(RoundedRectangle(cornerRadius: 5, style: .circular))
-                    .onHover(){ hovering in
-                        withAnimation{
-                            leftReverseHovered = hovering
-                        }
-                    }
-                    .onTapGesture {
-                        clear = String(clear.reversed())
-                    }
-                    Spacer()
-                    Menu{
-                        Picker(selection: $algo){
-                            ForEach(CodingAlgorithm.allCases, id: \.self){algorithm in
-                                Text(LocalizedStringKey(algorithm.rawValue)).tag(algorithm).font(.title2)
-                            }
-                        }label:{}
-                            .pickerStyle(.inline)
-                    }label: {
-                        Text(LocalizedStringKey(algo.rawValue))
-                            .font(.callout)
-                    }
-                    Spacer()
-                    HStack{
-                        Image(systemName: "arrow.left.arrow.right")
-                            .allowsHitTesting(false)
-                    }
-                    .padding(3)
-                    .background(rightReverseHovered ? Color("ItemBackgroundHovered") : Color("ItemBackgroundNormal"))
-                    .clipShape(RoundedRectangle(cornerRadius: 5, style: .circular))
-                    .onHover(){ hovering in
-                        withAnimation{
-                            rightReverseHovered = hovering
-                        }
-                    }
-                    .onTapGesture {
-                        encoded = String(encoded.reversed())
-                    }
-                    HStack{
-                        Image(systemName: "xmark")
-                            .font(.title3)
-                            .allowsHitTesting(false)
-                    }
-                    .padding(3)
-                    .background(rightDeleteHovered ? Color("ItemBackgroundHovered") : Color("ItemBackgroundNormal"))
-                    .clipShape(RoundedRectangle(cornerRadius: 5, style: .circular))
-                    .onHover(){ hovering in
-                        withAnimation{
-                            rightDeleteHovered = hovering
-                        }
-                    }
-                    .onTapGesture {
-                        encoded = ""
-                    }
-                }
+                CoderViewToolbar(clear: $clear, encoded: $encoded, algo: $algo)
             }
         }
     }

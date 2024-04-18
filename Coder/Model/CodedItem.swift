@@ -37,8 +37,3 @@ final class CodedItem {
     }()
 }
 
-enum CodingAlgorithm: String, CaseIterable{
-    case base64
-    case base32
-    case base16
-}
