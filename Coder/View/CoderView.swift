@@ -21,34 +21,14 @@ struct CoderView: View{
     var body: some View{
         HStack{
             TextEditor(text: $clear)
-                .scrollIndicators(.never)
-                .font(.system(size: fontSize))
+                .defaultEditorModifier(fontSize: fontSize)
                 
             VStack{
                 Image(systemName: "arrow.right")
                     .font(.title)
                     .padding()
                 Button{
-                    if clear.isEmpty{
-                        showClearEmptyAlert = true
-                        return
-                    }
-                    switch algo {
-                    case .base64:
-                        guard let data = clear.data(using: .utf8) else{
-                            showNotUTF8Alert = true
-                            return
-                        }
-                        encoded = data.base64EncodedString()
-                        break
-                    case .base32:
-                        encoded = clear.base32EncodedString
-                        break
-                    case .base16:
-                        encoded = clear.base16EncodedString
-                    }
-                    currentItem = CodedItem(clear: clear, coded: encoded, algo: algo, timestamp: Date().timeIntervalSince1970, id: currentID + 1)
-                    createNew.toggle()
+                    encode()
                 }label: {
                     Text(LocalizedStringKey("encode"))
                 }
@@ -67,37 +47,7 @@ struct CoderView: View{
                     }
                 }
                 Button{
-                    if encoded.isEmpty{
-                        showEncodedEmptyAlert = true
-                        return
-                    }
-                    let alias = encoded.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "\r", with: "").replacingOccurrences(of: "\n", with: "")
-                    switch algo {
-                    case .base64:
-                        guard let data = Data(base64Encoded: alias) else{
-                            showEncodedNotFormatAlert = true
-                            return
-                        }
-                        guard let string = String(data: data, encoding: .utf8) else{
-                            showNotUTF8Alert = true
-                            return
-                        }
-                        clear = string
-                    case .base32:
-                        guard let string  = alias.base32DecodedString() else{
-                            showEncodedNotFormatAlert = true
-                            return
-                        }
-                        clear = string
-                    case .base16:
-                        guard let string  = alias.base16DecodedString() else{
-                            showEncodedNotFormatAlert = true
-                            return
-                        }
-                        clear = string
-                    }
-                    currentItem = CodedItem(clear: clear, coded: encoded, algo: algo, timestamp: Date().timeIntervalSince1970, id: currentID + 1)
-                    createNew.toggle()
+                    decode()
                 }label: {
                     Text(LocalizedStringKey("decode"))
                 }
@@ -120,11 +70,7 @@ struct CoderView: View{
                     .padding()
             }
             TextEditor(text: $encoded)
-                .scrollIndicators(.never)
-                .font(.system(size: fontSize))
-                .overlay(alignment: .topTrailing){
-                    
-                }
+                .defaultEditorModifier(fontSize: fontSize)
 
         }
         .onChange(of: startCodeItem){
@@ -167,5 +113,62 @@ struct CoderView: View{
                 CoderViewToolbar(clear: $clear, encoded: $encoded, algo: $algo)
             }
         }
+    }
+    
+    private func decode(){
+        if encoded.isEmpty{
+            showEncodedEmptyAlert = true
+            return
+        }
+        let alias = encoded.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "\r", with: "").replacingOccurrences(of: "\n", with: "")
+        switch algo {
+        case .base64:
+            guard let data = Data(base64Encoded: alias) else{
+                showEncodedNotFormatAlert = true
+                return
+            }
+            guard let string = String(data: data, encoding: .utf8) else{
+                showNotUTF8Alert = true
+                return
+            }
+            clear = string
+        case .base32:
+            guard let string  = alias.base32DecodedString() else{
+                showEncodedNotFormatAlert = true
+                return
+            }
+            clear = string
+        case .base16:
+            guard let string  = alias.base16DecodedString() else{
+                showEncodedNotFormatAlert = true
+                return
+            }
+            clear = string
+        }
+        currentItem = CodedItem(clear: clear, coded: encoded, algo: algo, timestamp: Date().timeIntervalSince1970, id: currentID + 1)
+        createNew.toggle()
+    }
+    
+    private func encode(){
+        if clear.isEmpty{
+            showClearEmptyAlert = true
+            return
+        }
+        switch algo {
+        case .base64:
+            guard let data = clear.data(using: .utf8) else{
+                showNotUTF8Alert = true
+                return
+            }
+            encoded = data.base64EncodedString()
+            break
+        case .base32:
+            encoded = clear.base32EncodedString
+            break
+        case .base16:
+            encoded = clear.base16EncodedString
+        }
+        currentItem = CodedItem(clear: clear, coded: encoded, algo: algo, timestamp: Date().timeIntervalSince1970, id: currentID + 1)
+        createNew.toggle()
     }
 }

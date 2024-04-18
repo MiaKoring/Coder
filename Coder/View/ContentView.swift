@@ -7,11 +7,6 @@
 
 import SwiftUI
 import SwiftData
-extension Bundle {
-    var buildNumber: String {
-        return infoDictionary?["CFBundleVersion"] as! String
-    }
-}
 
 struct ContentView: View {
     @Environment(\.modelContext) private var context
@@ -38,15 +33,7 @@ struct ContentView: View {
                             .allowsHitTesting(false)
                         Spacer()
                     }
-                    .padding()
-                    .frame(height: 40.0)
-                    .background(newHovered ?
-                                newSelected ?
-                                Color("ItemBackgroundSelectedHovered"):
-                                    Color("ItemBackgroundHovered") :
-                                    newSelected ?
-                                Color("ItemBackgroundSelectedNormal") :
-                                    Color("ItemBackgroundNormal"))
+                    .newDisplayModifier(selected: $newSelected, hovered: $newHovered)
                     .onTapGesture {
                         currentSelected?.selected = false
                         currentSelected = nil
@@ -54,13 +41,8 @@ struct ContentView: View {
                         startCodeItem = nil
                         isNew = true
                     }
-                    .onHover(){hovering in
-                        withAnimation(.easeInOut(duration: 0.1)){
-                            newHovered = hovering
-                        }
-                    }
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                .buttonClipShape()
                 Divider()
                     .padding(0)
                 ForEach(items) { item in
@@ -70,15 +52,7 @@ struct ContentView: View {
                                 .allowsHitTesting(false)
                             Spacer()
                         }
-                        .padding()
-                        .frame(height: 40.0)
-                        .background(item.hovered ?
-                                    item.selected ?
-                                    Color("ItemBackgroundSelectedHovered"):
-                                        Color("ItemBackgroundHovered") :
-                                        item.selected ?
-                                    Color("ItemBackgroundSelectedNormal") :
-                                        Color("ItemBackgroundNormal"))
+                        .storedDisplayModifier(item: item)
                         .onTapGesture {
                             newSelected = false
                             currentSelected?.selected = false
@@ -86,31 +60,19 @@ struct ContentView: View {
                             currentSelected!.selected = true
                             startCodeItem = item
                         }
-                        .onHover(){hovering in
-                            withAnimation(.easeInOut(duration: 0.1)){
-                                item.hovered = hovering
-                            }
-                        }
                         
                         HStack{
                             Image(systemName: "trash")
                                 .allowsHitTesting(false)
                         }
-                        .padding()
-                        .frame(height: 40.0)
-                        .background(item.deleteHovered ? Color("ItemDeleteBackgroundHovered") : Color("ItemDeleteBackgroundNormal"))
-                        .onHover{hovered in
-                            withAnimation(.easeInOut(duration: 0.1)){
-                                item.deleteHovered = hovered
-                            }
-                        }
+                        .storedDisplayModifier(item: item, isDelete: true)
                         .onTapGesture{
                             withAnimation{
                                 deleteItem(item)
                             }
                         }
                     }
-                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .buttonClipShape()
                     
                 }
             }

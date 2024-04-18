@@ -36,10 +36,24 @@
       }
     },
     "Automatically check for updates" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisch nach Updates suchen"
+          }
+        }
+      }
     },
     "Automatically download updates" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updates automatisch laden"
+          }
+        }
+      }
     },
     "base16" : {
       "extractionState" : "stale",
@@ -48,6 +62,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Basis16"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "base16"
           }
         }
       }
@@ -59,6 +79,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Basis32"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "base32"
           }
         }
       }
@@ -98,7 +124,14 @@
       }
     },
     "Check for Updates…" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach Updates suchen..."
+          }
+        }
+      }
     },
     "clearEmpty" : {
       "extractionState" : "manual",
@@ -117,6 +150,23 @@
         }
       }
     },
+    "de" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deutsch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "German"
+          }
+        }
+      }
+    },
     "decode" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -124,6 +174,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "decodieren"
+          }
+        }
+      }
+    },
+    "en" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Englisch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "English"
           }
         }
       }
@@ -152,6 +219,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Right can't be empty"
+          }
+        }
+      }
+    },
+    "language" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprache"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language"
+          }
+        }
+      }
+    },
+    "languageChanged" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veränderungen an der Sprache werden bei einem App-Neustart wirksam"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changes to language apply after an app restart"
           }
         }
       }
@@ -223,6 +324,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Shrink Text"
+          }
+        }
+      }
+    },
+    "system" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Systemsprache"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System-Language"
           }
         }
       }

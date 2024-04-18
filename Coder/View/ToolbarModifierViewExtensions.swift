@@ -17,7 +17,7 @@ extension View{
     func toolbarItemModifier(hoverState: Binding<Bool>) -> some View{
         self
             .padding(3)
-            .background(background(hoverState.wrappedValue))
+            .background(backgroundColor(hoverState.wrappedValue))
             .clipShape(RoundedRectangle(cornerRadius: 5, style: .circular))
             .onHover(){ hovering in
                 withAnimation{
@@ -26,7 +26,10 @@ extension View{
             }
     }
     
-    private func background(_ hovered: Bool) -> Color{
-        hovered ? Color("ItemBackgroundHovered") : Color("ItemBackgroundNormal")
+    func backgroundColor(_ hovered: Bool, isDelete: Bool = false) -> Color{
+        if !isDelete{
+            return hovered ? Color("ItemBackgroundHovered") : Color("ItemBackgroundNormal")
+        }
+        return hovered ? Color("ItemDeleteBackgroundHovered") : Color("ItemDeleteBackgroundNormal")
     }
 }

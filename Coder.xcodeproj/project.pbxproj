@@ -12,7 +12,14 @@
 		14299D652BD172E900496969 /* UpdaterSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D642BD172E900496969 /* UpdaterSettingsView.swift */; };
 		14299D682BD1737F00496969 /* CheckForUpdatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D672BD1737F00496969 /* CheckForUpdatesViewModel.swift */; };
 		14299D6A2BD17A6800496969 /* CoderViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D692BD17A6800496969 /* CoderViewToolbar.swift */; };
-		14299D6C2BD17E6200496969 /* toolbarItemModifierViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D6B2BD17E6200496969 /* toolbarItemModifierViewExtensions.swift */; };
+		14299D6C2BD17E6200496969 /* ToolbarModifierViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D6B2BD17E6200496969 /* ToolbarModifierViewExtensions.swift */; };
+		14299D6E2BD1852F00496969 /* ModifierTextEditorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D6D2BD1852F00496969 /* ModifierTextEditorExtensions.swift */; };
+		14299D702BD1861900496969 /* LanguageSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D6F2BD1861900496969 /* LanguageSettingsView.swift */; };
+		14299D722BD1872800496969 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D712BD1872800496969 /* Language.swift */; };
+		14299D742BD1890100496969 /* FontSizeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D732BD1890100496969 /* FontSizeDirection.swift */; };
+		14299D772BD192E600496969 /* DisplayModifierViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D762BD192E600496969 /* DisplayModifierViewExtensions.swift */; };
+		14299D792BD1933F00496969 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D782BD1933F00496969 /* BundleExtensions.swift */; };
+		14299D7B2BD197D800496969 /* ItemProtokoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D7A2BD197D800496969 /* ItemProtokoll.swift */; };
 		14319CD62BD0538500A4A486 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 14319CD52BD0538500A4A486 /* Sparkle */; };
 		14E4CA8A2BCEA0BE00D7386C /* CoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CA892BCEA0BE00D7386C /* CoderApp.swift */; };
 		14E4CA8C2BCEA0BE00D7386C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CA8B2BCEA0BE00D7386C /* ContentView.swift */; };
@@ -49,7 +56,14 @@
 		14299D642BD172E900496969 /* UpdaterSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdaterSettingsView.swift; sourceTree = "<group>"; };
 		14299D672BD1737F00496969 /* CheckForUpdatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForUpdatesViewModel.swift; sourceTree = "<group>"; };
 		14299D692BD17A6800496969 /* CoderViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderViewToolbar.swift; sourceTree = "<group>"; };
-		14299D6B2BD17E6200496969 /* toolbarItemModifierViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toolbarItemModifierViewExtensions.swift; sourceTree = "<group>"; };
+		14299D6B2BD17E6200496969 /* ToolbarModifierViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarModifierViewExtensions.swift; sourceTree = "<group>"; };
+		14299D6D2BD1852F00496969 /* ModifierTextEditorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierTextEditorExtensions.swift; sourceTree = "<group>"; };
+		14299D6F2BD1861900496969 /* LanguageSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingsView.swift; sourceTree = "<group>"; };
+		14299D712BD1872800496969 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		14299D732BD1890100496969 /* FontSizeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeDirection.swift; sourceTree = "<group>"; };
+		14299D762BD192E600496969 /* DisplayModifierViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayModifierViewExtensions.swift; sourceTree = "<group>"; };
+		14299D782BD1933F00496969 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		14299D7A2BD197D800496969 /* ItemProtokoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProtokoll.swift; sourceTree = "<group>"; };
 		14319CD72BD056F700A4A486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		14E4CA862BCEA0BE00D7386C /* Coder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E4CA892BCEA0BE00D7386C /* CoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderApp.swift; sourceTree = "<group>"; };
@@ -93,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14299D752BD1891D00496969 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				14E4CAC62BCEB62A00D7386C /* UserDefaultHandler.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		14E4CA7D2BCEA0BE00D7386C = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +137,7 @@
 		14E4CA882BCEA0BE00D7386C /* Coder */ = {
 			isa = PBXGroup;
 			children = (
+				14299D752BD1891D00496969 /* Controller */,
 				14319CD72BD056F700A4A486 /* Info.plist */,
 				14E4CAC12BCEA9DD00D7386C /* Localized */,
 				14E4CAC02BCEA4CA00D7386C /* View */,
@@ -146,9 +169,12 @@
 			isa = PBXGroup;
 			children = (
 				14E4CA8D2BCEA0BE00D7386C /* CodedItem.swift */,
-				14E4CAC62BCEB62A00D7386C /* UserDefaultHandler.swift */,
 				14299D602BD1726F00496969 /* CodingAlgorithm.swift */,
 				14299D672BD1737F00496969 /* CheckForUpdatesViewModel.swift */,
+				14299D712BD1872800496969 /* Language.swift */,
+				14299D732BD1890100496969 /* FontSizeDirection.swift */,
+				14299D782BD1933F00496969 /* BundleExtensions.swift */,
+				14299D7A2BD197D800496969 /* ItemProtokoll.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,10 +185,13 @@
 				14E4CA892BCEA0BE00D7386C /* CoderApp.swift */,
 				14E4CA8B2BCEA0BE00D7386C /* ContentView.swift */,
 				14E4CAC42BCEB2C700D7386C /* CoderView.swift */,
+				14299D6D2BD1852F00496969 /* ModifierTextEditorExtensions.swift */,
 				14299D622BD172A600496969 /* CheckForUpdatesView.swift */,
 				14299D642BD172E900496969 /* UpdaterSettingsView.swift */,
 				14299D692BD17A6800496969 /* CoderViewToolbar.swift */,
-				14299D6B2BD17E6200496969 /* toolbarItemModifierViewExtensions.swift */,
+				14299D6B2BD17E6200496969 /* ToolbarModifierViewExtensions.swift */,
+				14299D6F2BD1861900496969 /* LanguageSettingsView.swift */,
+				14299D762BD192E600496969 /* DisplayModifierViewExtensions.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,13 +347,20 @@
 				14E4CA8C2BCEA0BE00D7386C /* ContentView.swift in Sources */,
 				14E4CA8E2BCEA0BE00D7386C /* CodedItem.swift in Sources */,
 				14E4CA8A2BCEA0BE00D7386C /* CoderApp.swift in Sources */,
-				14299D6C2BD17E6200496969 /* toolbarItemModifierViewExtensions.swift in Sources */,
+				14299D6E2BD1852F00496969 /* ModifierTextEditorExtensions.swift in Sources */,
+				14299D772BD192E600496969 /* DisplayModifierViewExtensions.swift in Sources */,
+				14299D6C2BD17E6200496969 /* ToolbarModifierViewExtensions.swift in Sources */,
 				14299D612BD1726F00496969 /* CodingAlgorithm.swift in Sources */,
+				14299D792BD1933F00496969 /* BundleExtensions.swift in Sources */,
 				14299D682BD1737F00496969 /* CheckForUpdatesViewModel.swift in Sources */,
 				14E4CAC52BCEB2C700D7386C /* CoderView.swift in Sources */,
 				14299D652BD172E900496969 /* UpdaterSettingsView.swift in Sources */,
+				14299D722BD1872800496969 /* Language.swift in Sources */,
 				14E4CAC72BCEB62B00D7386C /* UserDefaultHandler.swift in Sources */,
+				14299D702BD1861900496969 /* LanguageSettingsView.swift in Sources */,
+				14299D7B2BD197D800496969 /* ItemProtokoll.swift in Sources */,
 				14299D632BD172A600496969 /* CheckForUpdatesView.swift in Sources */,
+				14299D742BD1890100496969 /* FontSizeDirection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

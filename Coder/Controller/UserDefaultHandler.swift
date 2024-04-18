@@ -1,8 +1,11 @@
 import Foundation
-class UserDefaultHandler{
+final class UserDefaultHandler{
     public static func setup(){
         if UserDefaults.standard.double(forKey: "fontSize") == 0.0{
             UserDefaults.standard.set(14.0, forKey: "fontSize")
+        }
+        if UserDefaults.standard.string(forKey: "language") == nil{
+            UserDefaults.standard.set("system", forKey: "language")
         }
     }
     
@@ -25,9 +28,18 @@ class UserDefaultHandler{
         }
     }
     
-}
-
-enum FontSizeDirection{
-    case bigger
-    case smaller
+    public static func setLanguage(_ lang: Language) -> Language{
+        UserDefaults.standard.set(lang.rawValue, forKey: "language")
+        return lang
+    }
+    
+    public static func getLanguage() -> Language{
+        let result = UserDefaults.standard.string(forKey: "language")
+        if result == nil{
+            setup()
+            return .system
+        }
+        return Language(rawValue: result!) ?? .system
+    }
+    
 }

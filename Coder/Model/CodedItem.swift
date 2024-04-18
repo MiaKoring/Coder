@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class CodedItem {
+final class CodedItem: Item{
     var clear: String
     var coded: String
     var algo: CodingAlgorithm.RawValue
