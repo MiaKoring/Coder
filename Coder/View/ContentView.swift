@@ -99,9 +99,6 @@ struct ContentView: View {
                 un.selected = false
             }
         }
-        .onAppear(){
-            print(Bundle.main.buildNumber)
-        }
     }
 
     private func addItem() {

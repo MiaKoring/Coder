@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		14299D612BD1726F00496969 /* CodingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D602BD1726F00496969 /* CodingAlgorithm.swift */; };
-		14299D632BD172A600496969 /* CheckForUpdatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D622BD172A600496969 /* CheckForUpdatesView.swift */; };
-		14299D652BD172E900496969 /* UpdaterSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D642BD172E900496969 /* UpdaterSettingsView.swift */; };
-		14299D682BD1737F00496969 /* CheckForUpdatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D672BD1737F00496969 /* CheckForUpdatesViewModel.swift */; };
 		14299D6A2BD17A6800496969 /* CoderViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D692BD17A6800496969 /* CoderViewToolbar.swift */; };
 		14299D6C2BD17E6200496969 /* ToolbarModifierViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D6B2BD17E6200496969 /* ToolbarModifierViewExtensions.swift */; };
 		14299D6E2BD1852F00496969 /* ModifierTextEditorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D6D2BD1852F00496969 /* ModifierTextEditorExtensions.swift */; };
@@ -18,9 +15,7 @@
 		14299D722BD1872800496969 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D712BD1872800496969 /* Language.swift */; };
 		14299D742BD1890100496969 /* FontSizeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D732BD1890100496969 /* FontSizeDirection.swift */; };
 		14299D772BD192E600496969 /* DisplayModifierViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D762BD192E600496969 /* DisplayModifierViewExtensions.swift */; };
-		14299D792BD1933F00496969 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D782BD1933F00496969 /* BundleExtensions.swift */; };
 		14299D7B2BD197D800496969 /* ItemProtokoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14299D7A2BD197D800496969 /* ItemProtokoll.swift */; };
-		14319CD62BD0538500A4A486 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 14319CD52BD0538500A4A486 /* Sparkle */; };
 		1490CDAC2BD26DBF00CEB37F /* Octal in Frameworks */ = {isa = PBXBuildFile; productRef = 1490CDAB2BD26DBF00CEB37F /* Octal */; };
 		14E4CA8A2BCEA0BE00D7386C /* CoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CA892BCEA0BE00D7386C /* CoderApp.swift */; };
 		14E4CA8C2BCEA0BE00D7386C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CA8B2BCEA0BE00D7386C /* ContentView.swift */; };
@@ -53,9 +48,6 @@
 
 /* Begin PBXFileReference section */
 		14299D602BD1726F00496969 /* CodingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingAlgorithm.swift; sourceTree = "<group>"; };
-		14299D622BD172A600496969 /* CheckForUpdatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForUpdatesView.swift; sourceTree = "<group>"; };
-		14299D642BD172E900496969 /* UpdaterSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdaterSettingsView.swift; sourceTree = "<group>"; };
-		14299D672BD1737F00496969 /* CheckForUpdatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForUpdatesViewModel.swift; sourceTree = "<group>"; };
 		14299D692BD17A6800496969 /* CoderViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderViewToolbar.swift; sourceTree = "<group>"; };
 		14299D6B2BD17E6200496969 /* ToolbarModifierViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarModifierViewExtensions.swift; sourceTree = "<group>"; };
 		14299D6D2BD1852F00496969 /* ModifierTextEditorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierTextEditorExtensions.swift; sourceTree = "<group>"; };
@@ -63,7 +55,6 @@
 		14299D712BD1872800496969 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		14299D732BD1890100496969 /* FontSizeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeDirection.swift; sourceTree = "<group>"; };
 		14299D762BD192E600496969 /* DisplayModifierViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayModifierViewExtensions.swift; sourceTree = "<group>"; };
-		14299D782BD1933F00496969 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		14299D7A2BD197D800496969 /* ItemProtokoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProtokoll.swift; sourceTree = "<group>"; };
 		14319CD72BD056F700A4A486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		14E4CA862BCEA0BE00D7386C /* Coder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +79,6 @@
 			files = (
 				1490CDAC2BD26DBF00CEB37F /* Octal in Frameworks */,
 				14E4CACD2BCECB6000D7386C /* Base32 in Frameworks */,
-				14319CD62BD0538500A4A486 /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,10 +162,8 @@
 			children = (
 				14E4CA8D2BCEA0BE00D7386C /* CodedItem.swift */,
 				14299D602BD1726F00496969 /* CodingAlgorithm.swift */,
-				14299D672BD1737F00496969 /* CheckForUpdatesViewModel.swift */,
 				14299D712BD1872800496969 /* Language.swift */,
 				14299D732BD1890100496969 /* FontSizeDirection.swift */,
-				14299D782BD1933F00496969 /* BundleExtensions.swift */,
 				14299D7A2BD197D800496969 /* ItemProtokoll.swift */,
 			);
 			path = Model;
@@ -188,8 +176,6 @@
 				14E4CA8B2BCEA0BE00D7386C /* ContentView.swift */,
 				14E4CAC42BCEB2C700D7386C /* CoderView.swift */,
 				14299D6D2BD1852F00496969 /* ModifierTextEditorExtensions.swift */,
-				14299D622BD172A600496969 /* CheckForUpdatesView.swift */,
-				14299D642BD172E900496969 /* UpdaterSettingsView.swift */,
 				14299D692BD17A6800496969 /* CoderViewToolbar.swift */,
 				14299D6B2BD17E6200496969 /* ToolbarModifierViewExtensions.swift */,
 				14299D6F2BD1861900496969 /* LanguageSettingsView.swift */,
@@ -224,7 +210,6 @@
 			name = Coder;
 			packageProductDependencies = (
 				14E4CACC2BCECB6000D7386C /* Base32 */,
-				14319CD52BD0538500A4A486 /* Sparkle */,
 				1490CDAB2BD26DBF00CEB37F /* Octal */,
 			);
 			productName = Coder;
@@ -301,7 +286,6 @@
 			mainGroup = 14E4CA7D2BCEA0BE00D7386C;
 			packageReferences = (
 				14E4CACB2BCECB6000D7386C /* XCRemoteSwiftPackageReference "Base32" */,
-				14319CD42BD0538500A4A486 /* XCRemoteSwiftPackageReference "Sparkle" */,
 				1490CDAA2BD26DBF00CEB37F /* XCRemoteSwiftPackageReference "OctalSwift" */,
 			);
 			productRefGroup = 14E4CA872BCEA0BE00D7386C /* Products */;
@@ -355,15 +339,11 @@
 				14299D772BD192E600496969 /* DisplayModifierViewExtensions.swift in Sources */,
 				14299D6C2BD17E6200496969 /* ToolbarModifierViewExtensions.swift in Sources */,
 				14299D612BD1726F00496969 /* CodingAlgorithm.swift in Sources */,
-				14299D792BD1933F00496969 /* BundleExtensions.swift in Sources */,
-				14299D682BD1737F00496969 /* CheckForUpdatesViewModel.swift in Sources */,
 				14E4CAC52BCEB2C700D7386C /* CoderView.swift in Sources */,
-				14299D652BD172E900496969 /* UpdaterSettingsView.swift in Sources */,
 				14299D722BD1872800496969 /* Language.swift in Sources */,
 				14E4CAC72BCEB62B00D7386C /* UserDefaultHandler.swift in Sources */,
 				14299D702BD1861900496969 /* LanguageSettingsView.swift in Sources */,
 				14299D7B2BD197D800496969 /* ItemProtokoll.swift in Sources */,
-				14299D632BD172A600496969 /* CheckForUpdatesView.swift in Sources */,
 				14299D742BD1890100496969 /* FontSizeDirection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,7 +509,7 @@
 				CODE_SIGN_ENTITLEMENTS = Coder/Coder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_ASSET_PATHS = "\"Coder/Preview Content\"";
 				DEVELOPMENT_TEAM = 68YWPYV749;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -545,7 +525,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = "1.1 (Internal improvements, added setting for language)";
+				MARKETING_VERSION = "1.2 Added base8 encoding";
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = de.touchthegrass.Coder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -562,7 +542,7 @@
 				CODE_SIGN_ENTITLEMENTS = Coder/Coder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_ASSET_PATHS = "\"Coder/Preview Content\"";
 				DEVELOPMENT_TEAM = 68YWPYV749;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -578,7 +558,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = "1.1 (Internal improvements, added setting for language)";
+				MARKETING_VERSION = "1.2 Added base8 encoding";
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = de.touchthegrass.Coder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -701,14 +681,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		14319CD42BD0538500A4A486 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sparkle-project/Sparkle";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.6.0;
-			};
-		};
 		1490CDAA2BD26DBF00CEB37F /* XCRemoteSwiftPackageReference "OctalSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MiaKoring/OctalSwift";
@@ -728,11 +700,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		14319CD52BD0538500A4A486 /* Sparkle */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 14319CD42BD0538500A4A486 /* XCRemoteSwiftPackageReference "Sparkle" */;
-			productName = Sparkle;
-		};
 		1490CDAB2BD26DBF00CEB37F /* Octal */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1490CDAA2BD26DBF00CEB37F /* XCRemoteSwiftPackageReference "OctalSwift" */;
