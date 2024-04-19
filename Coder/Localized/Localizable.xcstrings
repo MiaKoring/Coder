@@ -55,6 +55,23 @@
         }
       }
     },
+    "base8" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Basis8"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "base8"
+          }
+        }
+      }
+    },
     "base16" : {
       "extractionState" : "stale",
       "localizations" : {

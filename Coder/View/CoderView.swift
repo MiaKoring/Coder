@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 import Base32
+import Octal
 
 struct CoderView: View{
     @State var clear: String = ""
@@ -132,18 +133,28 @@ struct CoderView: View{
                 return
             }
             clear = string
+            break
         case .base32:
             guard let string  = alias.base32DecodedString() else{
                 showEncodedNotFormatAlert = true
                 return
             }
             clear = string
+            break
         case .base16:
             guard let string  = alias.base16DecodedString() else{
                 showEncodedNotFormatAlert = true
                 return
             }
             clear = string
+            break
+        case .base8:
+            guard let string = encoded.octalDecodedString() else {
+                showEncodedNotFormatAlert = true
+                return
+            }
+            clear = string
+            break
         }
         currentItem = CodedItem(clear: clear, coded: encoded, algo: algo, timestamp: Date().timeIntervalSince1970, id: currentID + 1)
         createNew.toggle()
@@ -167,6 +178,14 @@ struct CoderView: View{
             break
         case .base16:
             encoded = clear.base16EncodedString
+            break
+        case .base8:
+            guard let encodedString = clear.octalString() else{
+                showNotUTF8Alert = true
+                return
+            }
+            encoded = encodedString
+            break
         }
         currentItem = CodedItem(clear: clear, coded: encoded, algo: algo, timestamp: Date().timeIntervalSince1970, id: currentID + 1)
         createNew.toggle()

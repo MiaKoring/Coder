@@ -11,4 +11,5 @@ enum CodingAlgorithm: String, CaseIterable{
     case base64
     case base32
     case base16
+    case base8
 }
