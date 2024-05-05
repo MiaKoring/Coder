@@ -27,6 +27,7 @@
 		14E4CAC52BCEB2C700D7386C /* CoderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CAC42BCEB2C700D7386C /* CoderView.swift */; };
 		14E4CAC72BCEB62B00D7386C /* UserDefaultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4CAC62BCEB62A00D7386C /* UserDefaultHandler.swift */; };
 		14E4CACD2BCECB6000D7386C /* Base32 in Frameworks */ = {isa = PBXBuildFile; productRef = 14E4CACC2BCECB6000D7386C /* Base32 */; };
+		A6D10E9D2BE2D8CE008CF598 /* ContentViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D10E9C2BE2D8CE008CF598 /* ContentViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		14E4CAC22BCEAA1E00D7386C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		14E4CAC42BCEB2C700D7386C /* CoderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderView.swift; sourceTree = "<group>"; };
 		14E4CAC62BCEB62A00D7386C /* UserDefaultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHandler.swift; sourceTree = "<group>"; };
+		A6D10E9C2BE2D8CE008CF598 /* ContentViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		14E4CA882BCEA0BE00D7386C /* Coder */ = {
 			isa = PBXGroup;
 			children = (
+				14E4CA892BCEA0BE00D7386C /* CoderApp.swift */,
 				14299D752BD1891D00496969 /* Controller */,
 				14319CD72BD056F700A4A486 /* Info.plist */,
 				14E4CAC12BCEA9DD00D7386C /* Localized */,
@@ -172,7 +175,6 @@
 		14E4CAC02BCEA4CA00D7386C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				14E4CA892BCEA0BE00D7386C /* CoderApp.swift */,
 				14E4CA8B2BCEA0BE00D7386C /* ContentView.swift */,
 				14E4CAC42BCEB2C700D7386C /* CoderView.swift */,
 				14299D6D2BD1852F00496969 /* ModifierTextEditorExtensions.swift */,
@@ -180,6 +182,7 @@
 				14299D6B2BD17E6200496969 /* ToolbarModifierViewExtensions.swift */,
 				14299D6F2BD1861900496969 /* LanguageSettingsView.swift */,
 				14299D762BD192E600496969 /* DisplayModifierViewExtensions.swift */,
+				A6D10E9C2BE2D8CE008CF598 /* ContentViewExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				14299D722BD1872800496969 /* Language.swift in Sources */,
 				14E4CAC72BCEB62B00D7386C /* UserDefaultHandler.swift in Sources */,
 				14299D702BD1861900496969 /* LanguageSettingsView.swift in Sources */,
+				A6D10E9D2BE2D8CE008CF598 /* ContentViewExtension.swift in Sources */,
 				14299D7B2BD197D800496969 /* ItemProtokoll.swift in Sources */,
 				14299D742BD1890100496969 /* FontSizeDirection.swift in Sources */,
 			);
