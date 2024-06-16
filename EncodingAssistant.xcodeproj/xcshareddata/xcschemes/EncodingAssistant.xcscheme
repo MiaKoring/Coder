@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "14E4CA852BCEA0BE00D7386C"
-               BuildableName = "Coder.app"
-               BlueprintName = "Coder"
-               ReferencedContainer = "container:Coder.xcodeproj">
+               BuildableName = "EncodingAssistant.app"
+               BlueprintName = "EncodingAssistant"
+               ReferencedContainer = "container:EncodingAssistant.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -38,7 +38,7 @@
                BlueprintIdentifier = "14E4CA982BCEA0C000D7386C"
                BuildableName = "CoderTests.xctest"
                BlueprintName = "CoderTests"
-               ReferencedContainer = "container:Coder.xcodeproj">
+               ReferencedContainer = "container:EncodingAssistant.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "14E4CAA22BCEA0C100D7386C"
                BuildableName = "CoderUITests.xctest"
                BlueprintName = "CoderUITests"
-               ReferencedContainer = "container:Coder.xcodeproj">
+               ReferencedContainer = "container:EncodingAssistant.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -69,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "14E4CA852BCEA0BE00D7386C"
-            BuildableName = "Coder.app"
-            BlueprintName = "Coder"
-            ReferencedContainer = "container:Coder.xcodeproj">
+            BuildableName = "EncodingAssistant.app"
+            BlueprintName = "EncodingAssistant"
+            ReferencedContainer = "container:EncodingAssistant.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -86,9 +86,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "14E4CA852BCEA0BE00D7386C"
-            BuildableName = "Coder.app"
-            BlueprintName = "Coder"
-            ReferencedContainer = "container:Coder.xcodeproj">
+            BuildableName = "EncodingAssistant.app"
+            BlueprintName = "EncodingAssistant"
+            ReferencedContainer = "container:EncodingAssistant.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

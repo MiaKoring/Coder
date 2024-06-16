@@ -58,7 +58,7 @@
 		14299D762BD192E600496969 /* DisplayModifierViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayModifierViewExtensions.swift; sourceTree = "<group>"; };
 		14299D7A2BD197D800496969 /* ItemProtokoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProtokoll.swift; sourceTree = "<group>"; };
 		14319CD72BD056F700A4A486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		14E4CA862BCEA0BE00D7386C /* Coder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E4CA862BCEA0BE00D7386C /* EncodingAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncodingAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E4CA892BCEA0BE00D7386C /* CoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderApp.swift; sourceTree = "<group>"; };
 		14E4CA8B2BCEA0BE00D7386C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14E4CA8D2BCEA0BE00D7386C /* CodedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedItem.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		14E4CA872BCEA0BE00D7386C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14E4CA862BCEA0BE00D7386C /* Coder.app */,
+				14E4CA862BCEA0BE00D7386C /* EncodingAssistant.app */,
 				14E4CA992BCEA0C000D7386C /* CoderTests.xctest */,
 				14E4CAA32BCEA0C100D7386C /* CoderUITests.xctest */,
 			);
@@ -198,9 +198,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		14E4CA852BCEA0BE00D7386C /* Coder */ = {
+		14E4CA852BCEA0BE00D7386C /* EncodingAssistant */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14E4CAAD2BCEA0C100D7386C /* Build configuration list for PBXNativeTarget "Coder" */;
+			buildConfigurationList = 14E4CAAD2BCEA0C100D7386C /* Build configuration list for PBXNativeTarget "EncodingAssistant" */;
 			buildPhases = (
 				14E4CA822BCEA0BE00D7386C /* Sources */,
 				14E4CA832BCEA0BE00D7386C /* Frameworks */,
@@ -210,13 +210,13 @@
 			);
 			dependencies = (
 			);
-			name = Coder;
+			name = EncodingAssistant;
 			packageProductDependencies = (
 				14E4CACC2BCECB6000D7386C /* Base32 */,
 				1490CDAB2BD26DBF00CEB37F /* Octal */,
 			);
 			productName = Coder;
-			productReference = 14E4CA862BCEA0BE00D7386C /* Coder.app */;
+			productReference = 14E4CA862BCEA0BE00D7386C /* EncodingAssistant.app */;
 			productType = "com.apple.product-type.application";
 		};
 		14E4CA982BCEA0C000D7386C /* CoderTests */ = {
@@ -278,7 +278,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 14E4CA812BCEA0BE00D7386C /* Build configuration list for PBXProject "Coder" */;
+			buildConfigurationList = 14E4CA812BCEA0BE00D7386C /* Build configuration list for PBXProject "EncodingAssistant" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -295,7 +295,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14E4CA852BCEA0BE00D7386C /* Coder */,
+				14E4CA852BCEA0BE00D7386C /* EncodingAssistant */,
 				14E4CA982BCEA0C000D7386C /* CoderTests */,
 				14E4CAA22BCEA0C100D7386C /* CoderUITests */,
 			);
@@ -372,12 +372,12 @@
 /* Begin PBXTargetDependency section */
 		14E4CA9B2BCEA0C000D7386C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14E4CA852BCEA0BE00D7386C /* Coder */;
+			target = 14E4CA852BCEA0BE00D7386C /* EncodingAssistant */;
 			targetProxy = 14E4CA9A2BCEA0C000D7386C /* PBXContainerItemProxy */;
 		};
 		14E4CAA52BCEA0C100D7386C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14E4CA852BCEA0BE00D7386C /* Coder */;
+			target = 14E4CA852BCEA0BE00D7386C /* EncodingAssistant */;
 			targetProxy = 14E4CAA42BCEA0C100D7386C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -520,7 +520,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Coder/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Coder;
+				INFOPLIST_KEY_CFBundleDisplayName = EncodingAssistant;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -553,7 +553,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Coder/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Coder;
+				INFOPLIST_KEY_CFBundleDisplayName = EncodingAssistant;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -646,7 +646,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14E4CA812BCEA0BE00D7386C /* Build configuration list for PBXProject "Coder" */ = {
+		14E4CA812BCEA0BE00D7386C /* Build configuration list for PBXProject "EncodingAssistant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14E4CAAB2BCEA0C100D7386C /* Debug */,
@@ -655,7 +655,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14E4CAAD2BCEA0C100D7386C /* Build configuration list for PBXNativeTarget "Coder" */ = {
+		14E4CAAD2BCEA0C100D7386C /* Build configuration list for PBXNativeTarget "EncodingAssistant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14E4CAAE2BCEA0C100D7386C /* Debug */,
