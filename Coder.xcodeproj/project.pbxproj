@@ -529,7 +529,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = "1.2 Added base8 encoding";
+				MARKETING_VERSION = 1.2;
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = de.touchthegrass.Coder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -562,7 +562,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = "1.2 Added base8 encoding";
+				MARKETING_VERSION = 1.2;
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = de.touchthegrass.Coder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
